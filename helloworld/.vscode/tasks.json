@@ -24,7 +24,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${fileDirname}\\*.cpp",
                 "-o",
                 "${fileDirname}\\bin\\${fileBasenameNoExtension}.exe"
             ],
