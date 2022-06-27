@@ -7,3 +7,4 @@ int main(){
     log("hello world!");
     std::cin.get();
 }
+
