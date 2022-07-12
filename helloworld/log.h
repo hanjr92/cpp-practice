@@ -4,7 +4,7 @@
 #define _LOG_H
 #include<iostream>
 
-static void log(const char* message)
+inline void log(const char* message)
 {
     std::cout << message << std::endl;
 }
