@@ -68,9 +68,23 @@ struct Entity3
 void fn()
 {
 	static int n=10; // 静态局部变量保存在全局数据区，而不是保存在栈中，每次的值保持到下一次调用，直到下次赋新值。
+    // 静态局部变量只会被初始化一次。
 	std::cout<<n<<std::endl;
 	n++;
 }
+
+
+class Singleton
+{
+    public:
+        static Singleton& Get()
+        {
+            Singleton instance; //静态实例化，一旦初始化，会持续保存，不会被销毁
+            return instance;
+        }
+
+        void Hello(){}
+};
 
 int main()
 {
