@@ -2,7 +2,11 @@
 
 class Entity
 {
-    public:
+    private:   //私有成员只能由类内部访问
+        int id;   
+    protected: //受保护成员只能由类内部访问，子类可以访问，但不可以从外部进行访问
+        std::string name;
+    public:   //公有成员可以由类内部访问，子类可以访问，也可以从外部进行访问
     int x = 0;
     int y = 0;
 
