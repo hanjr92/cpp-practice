@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "d:/cpp-practice/new_and_delete",
-      "program": "d:/cpp-practice/new_and_delete/build/Debug/outDebug",
+      "cwd": "d:/cpp-practice/explicit",
+      "program": "d:/cpp-practice/explicit/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
