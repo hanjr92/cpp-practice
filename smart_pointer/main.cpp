@@ -1,5 +1,5 @@
 #include<iostream>
-#include<memory>//智能指针头文件
+#include<memory>//智能指针头文件，一旦一个对象使用智能指针管理后，就不该再使用原始裸指针去操作；
 
 class Entity
 {   
@@ -32,6 +32,13 @@ int main()
             std::cout << sharedEntity.use_count() << std::endl;
             entity2 = sharedEntity;
             std::cout << sharedEntity.use_count() << std::endl;
+            entity2.reset();//会重置entity2, sharedEntity引用减一
+            std::cout << sharedEntity.use_count() << std::endl;
+            {
+                std::shared_ptr<Entity> entity3 = sharedEntity;
+                std::cout << sharedEntity.use_count() << std::endl;
+            }
+            std::cout << sharedEntity.use_count() << std::endl;//entity3的离开作用域自动析构，sharedEntity引用计数减一
             std::weak_ptr<Entity> weakEntity = sharedEntity; //此时并不会增加sharedEntity的引用计数，weak_ptr主要用来避免循环引用时出现的不正确引用计数；
             //weak_ptr也会随着作用域释放
             std::cout << sharedEntity.use_count() << std::endl;//可以看到并没有增加引用计数。
