@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "d:/cpp-practice/copy_constructors",
-      "program": "d:/cpp-practice/copy_constructors/build/Debug/outDebug",
+      "cwd": "d:/cpp-practice/vector",
+      "program": "d:/cpp-practice/vector/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
